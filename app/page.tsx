@@ -160,13 +160,10 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Header */}
       <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Brain className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">MediCare Pro</span>
+              <Image src="/logo.svg" alt="Logo" width={150} height={40} />
             </div>
 
             <nav className="hidden md:flex items-center gap-8">
@@ -575,7 +572,7 @@ export default function LandingPage() {
 
             {/* Google Play Badge - Direita */}
             <div className="hidden lg:flex items-center gap-2 bg-black rounded-lg px-6 py-4 cursor-pointer hover:bg-black/80 transition-colors">
-              <Image src="/google-play-logo.png" alt="Google Play" width={32} height={32} className="w-8 h-8" />
+              <Image src="/google-play-logo.svg" alt="Google Play" width={32} height={32} className="w-8 h-8" />
               <div className="text-left">
                 <div className="text-xs text-white/70">Disponível no</div>
                 <div className="text-lg font-semibold text-white">Google Play</div>
@@ -594,7 +591,7 @@ export default function LandingPage() {
             </div>
 
             <div className="flex items-center gap-2 bg-black rounded-lg px-4 py-3 cursor-pointer hover:bg-black/80 transition-colors">
-              <Image src="/google-play-logo.png" alt="Google Play" width={24} height={24} className="w-6 h-6" />
+              <Image src="/google-play-logo.svg" alt="Google Play" width={24} height={24} className="w-6 h-6" />
               <div className="text-left">
                 <div className="text-xs text-white/70">Disponível no</div>
                 <div className="text-sm font-semibold text-white">Google Play</div>
@@ -610,10 +607,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Brain className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold text-foreground">MediCare Pro</span>
+                <Image src="/logo.svg" alt="Logo" width={150} height={40} />
               </div>
               <p className="text-muted-foreground text-pretty">
                 O futuro da medicina está aqui. Transforme sua prática com inteligência artificial.
