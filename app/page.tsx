@@ -159,15 +159,14 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Header */}
-      <div className="px-4 pt-4">
-        <header className="bg-white rounded-full shadow-lg max-w-7xl mx-auto">
-          <div className="mx-auto px-8 sm:px-10 lg:px-12">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center gap-2">
-                <Image src="/logo.svg" alt="Logo" width={110} height={40} />
-              </div>
+      <header className="bg-white/50 backdrop-blur-sm fixed top-4 inset-x-0 max-w-7xl mx-auto rounded-full shadow-lg z-50">
+        <div className="mx-auto px-8 sm:px-10 lg:px-12">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-2">
+              <Image src="/logo.svg" alt="Logo" width={110} height={40} />
+            </div>
 
-              <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8">
               <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                 Recursos
               </Link>
@@ -180,9 +179,9 @@ export default function LandingPage() {
               <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Preços
               </Link>
-              </nav>
+            </nav>
 
-              <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <Link href="/dashboard">
                 <Button variant="ghost" className="hidden md:inline-flex">
                   Entrar
@@ -194,12 +193,11 @@ export default function LandingPage() {
               </Button>
             </div>
           </div>
-            </div>
-        </header>
-      </div>
+        </div>
+      </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-6 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-accent/15 to-transparent rounded-full blur-3xl" />
 
