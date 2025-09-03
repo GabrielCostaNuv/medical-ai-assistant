@@ -159,14 +159,15 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Header */}
-      <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="Logo" width={150} height={40} />
-            </div>
+      <div className="px-4 pt-4">
+        <header className="bg-white rounded-full shadow-lg max-w-7xl mx-auto">
+          <div className="mx-auto px-8 sm:px-10 lg:px-12">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center gap-2">
+                <Image src="/logo.svg" alt="Logo" width={110} height={40} />
+              </div>
 
-            <nav className="hidden md:flex items-center gap-8">
+              <nav className="hidden md:flex items-center gap-8">
               <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                 Recursos
               </Link>
@@ -179,9 +180,9 @@ export default function LandingPage() {
               <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Preços
               </Link>
-            </nav>
+              </nav>
 
-            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
               <Link href="/dashboard">
                 <Button variant="ghost" className="hidden md:inline-flex">
                   Entrar
@@ -193,8 +194,9 @@ export default function LandingPage() {
               </Button>
             </div>
           </div>
-        </div>
-      </header>
+            </div>
+        </header>
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 sm:px-6 lg:px-8 overflow-hidden">
@@ -607,7 +609,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Image src="/logo.svg" alt="Logo" width={150} height={40} />
+                <Image src="/logo.svg" alt="Logo" width={110} height={40} />
               </div>
               <p className="text-muted-foreground text-pretty">
                 O futuro da medicina está aqui. Transforme sua prática com inteligência artificial.
