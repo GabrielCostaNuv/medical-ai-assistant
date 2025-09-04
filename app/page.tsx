@@ -45,7 +45,7 @@ export default function LandingPage() {
       title: "Assistente IA Inteligente",
       description:
         "Receba insights médicos em tempo real, sugestões de diagnóstico e análise de sintomas com tecnologia de ponta.",
-      gradient: "from-blue-500/20 to-purple-500/20",
+      gradient: "from-green-500/20 to-teal-500/20",
     },
     {
       icon: Calendar,
@@ -58,7 +58,7 @@ export default function LandingPage() {
       title: "Prontuário Digital Avançado",
       description:
         "Mantenha histórico completo dos pacientes, relatórios automáticos e acesso rápido a informações críticas.",
-      gradient: "from-orange-500/20 to-red-500/20",
+      gradient: "from-green-500/20 to-teal-500/20",
     },
   ]
 
@@ -122,7 +122,7 @@ export default function LandingPage() {
     },
     {
       name: "Profissional",
-      price: "R$ 97",
+      price: "R$ 59",
       period: "/mês",
       description: "Para médicos que querem otimizar completamente sua prática",
       features: [
@@ -138,8 +138,8 @@ export default function LandingPage() {
       popular: true,
     },
     {
-      name: "Clínica",
-      price: "R$ 197",
+      name: "Clínico",
+      price: "R$ 99",
       period: "/mês",
       description: "Para clínicas e consultórios com múltiplos médicos",
       features: [
@@ -159,7 +159,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Header */}
-      <header className="bg-white/50 backdrop-blur-sm fixed top-4 inset-x-0 max-w-7xl mx-auto rounded-full shadow-lg z-50">
+      <header className="bg-white/50 backdrop-blur-sm fixed top-4 inset-x-0 max-w-7xl mx-auto rounded-full shadow-lg z-50 mt-4">
         <div className="mx-auto px-8 sm:px-10 lg:px-12">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
@@ -182,14 +182,9 @@ export default function LandingPage() {
             </nav>
 
             <div className="flex items-center gap-4">
-              <Link href="/dashboard">
-                <Button variant="ghost" className="hidden md:inline-flex">
-                  Entrar
-                </Button>
-              </Link>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button className=" cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90">
                 Teste Grátis
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className=" h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -197,15 +192,14 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-accent/15 to-transparent rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mt-6">
             <div className="space-y-8 text-center lg:text-left">
               <div className="space-y-4">
-                <Badge className="bg-accent/10 text-accent border-accent/20">🚀 Novo: IA Médica Avançada</Badge>
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground text-balance">
                   Revolucione Sua Prática Médica com <span className="text-primary">Inteligência Artificial</span>
                 </h1>
@@ -216,12 +210,9 @@ export default function LandingPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 mx-auto lg:mx-0">
+                <Button size="lg" className=" cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 mx-auto lg:mx-0">
                   Começar Teste Grátis
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="mx-auto lg:mx-0 bg-transparent">
-                  Ver Demonstração
+                  <ArrowRight className=" h-5 w-5" />
                 </Button>
               </div>
 
@@ -319,8 +310,8 @@ export default function LandingPage() {
                       {feature.description}
                     </p>
                   </div>
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 mx-auto lg:mx-0">
-                    Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 mx-auto lg:mx-0 cursor-pointer">
+                    Saiba Mais <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
 
@@ -376,7 +367,7 @@ export default function LandingPage() {
                   </div>
                 )}
 
-                <CardContent className="p-8 space-y-6">
+                <CardContent className="p-6 space-y-4">
                   <div className="text-center space-y-2">
                     <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
                       {index === 0 && <Users className="h-6 w-6 text-primary" />}
@@ -388,17 +379,11 @@ export default function LandingPage() {
                   </div>
 
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-foreground">
+                    <div className="text-4xl font-bold text-primary">
                       {plan.price}
                       <span className="text-lg font-normal text-muted-foreground">{plan.period}</span>
                     </div>
                   </div>
-
-                  <Button
-                    className={`w-full ${plan.popular ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-muted text-foreground hover:bg-muted/80"}`}
-                  >
-                    {plan.buttonText}
-                  </Button>
 
                   <div className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
